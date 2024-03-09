@@ -15,13 +15,16 @@ argument2=$2
 #checking first argument is a file
 if [[ -f $argument1 ]]; then
     echo "$1 is a file"
+
+    grep -n "$argument2" classlist.txt
     
     #opening the file and searching for given username
     #requires new line after last username
     while IFS= read -r username
         do
             if [[ $argument2 = $username ]]; then
-                echo "Username found!"
+                echo "Username found!"  
+                grep -n shell classlist.txt
             fi
         done < classlist.txt
 else
