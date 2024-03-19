@@ -57,7 +57,7 @@ if [[ -f $argument1 ]]; then
                 done
         done
 
-        #
+        #branching for user's options for adding usernames 
         if [[ $addUser = 1 ]]; then
 
             #getting user input and validating       
@@ -75,6 +75,14 @@ if [[ -f $argument1 ]]; then
                         fi
                     done
             done
+
+            #adding new user name
+            echo "" >> classlist.txt
+            echo "$argument2" >> classlist.txt
+
+            if [[ $fixList = 1 ]]; then
+                sort -o classlist.txt classlist.txt
+            fi
         fi
 
     fi
