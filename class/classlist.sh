@@ -15,6 +15,12 @@ argument1=$1
 argument2=$2
 #creating placeholder for username check
 userFound=0
+#creating arrays for valid inputs
+validPos=("Y" "y" "Yes" "yes")
+validNeg=("N" "n" "No" "no")
+#creating check placeholder for input validatiion
+userChoice=""
+validInput=0
 
 #checking first argument is a file
 if [[ -f $argument1 ]]; then
@@ -33,6 +39,18 @@ if [[ -f $argument1 ]]; then
     #branching in case of failed search
     if [[ $userFound = 0 ]]; then
         echo "Username $argument2 was not found."
+        while [ $validInput = 0 ]; do
+                read -p "Would you like to add $argument2 to $argument1? " userChoice
+                #checking if user's choice is valid
+                for ((i = 0; i < 4; i++ )); do
+                    if [[ $userChoice = ${validPos[$i]} ]]; then
+                        (( validInput=1 )) 
+                    fi
+                    if [[ $userChoice = ${validNeg[$i]} ]]; then
+                        (( validInput=1 )) 
+                    fi
+                done
+        done
     fi
 else
     echo "$1 is not a file, please try again."
