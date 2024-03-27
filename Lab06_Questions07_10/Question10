@@ -1,0 +1,14 @@
+Use sort with the --numeric-sort (–n) option to create a file named calo that holds the lines of the food sorted by calories in descending order (the food with the most calories at the top of the list).  Any foods with the same value for calories should be sorted by descending price.
+
+Command: 
+sort -r -n --key 4,4 --key 3,3  food > calo
+
+Output: 
+apple pie  2.75  1500
+crunchy taco  1.25  625
+french fries  0.75  625
+rare hamburger  2.50  500
+milk shake  3  200
+tuna salad  .25  100
+potato chips  0.50  80
+tea bag  .20  0
