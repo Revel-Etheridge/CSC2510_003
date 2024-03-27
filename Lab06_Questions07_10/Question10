@@ -1,0 +1,1 @@
+Use sort with the --numeric-sort (–n) option to create a file named calo that holds the lines of the food sorted by calories in descending order (the food with the most calories at the top of the list).  Any foods with the same value for calories should be sorted by descending price.
