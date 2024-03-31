@@ -17,12 +17,12 @@ grep -E '^Jose|Jose$' $checkFile
 
 #Problem 2
 echo -e "${HI}2. Contain a sequence of at least 27 upper or lower-case alphabetic characters.$NORMAL"
-grep -E '[a-z]{27}' $checkFile
+grep -E -i '[a-zA-Z]{27}' $checkFile
 
 
 #Problem 3
 echo -e "${HI}3. Consists of more than 18 characters. The characters can be anything, including alphabetic and numeric.$NORMAL"
-
+grep -E  -i -m10 '[a-zA-Z0-9]{18}' $checkFile
 
 
 #Problem 4
