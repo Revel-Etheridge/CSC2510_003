@@ -15,6 +15,7 @@ NORMAL='\033[0m'
 echo -e "${HI}1. Starts or ends with Jose.$NORMAL"
 grep -E -m10 '^Jose|Jose$' $checkFile
 
+
 #Problem 2
 echo -e "${HI}2. Contain a sequence of at least 27 upper or lower-case alphabetic characters.$NORMAL"
 grep -E -i -m10 '[a-zA-Z]{27}' $checkFile
@@ -37,6 +38,7 @@ grep -E -i '^\s[a-zA-Z]{6,8}\s$' "$checkFile"
 
 #Problem 6
 echo -e "${HI}6. Contains a local phone number. For example: 123-4567.$NORMAL"
+grep -E -m10 '^([0-9]{3}-[0-9]{4}|[^-][0-9]{3}-[0-9]{4})' $checkFile
 
 
 
