@@ -17,7 +17,7 @@ grep -E '^Jose|Jose$' $checkFile
 
 #Problem 2
 echo -e "${HI}2. Contain a sequence of at least 27 upper or lower-case alphabetic characters.$NORMAL"
-
+grep -E '[a-z]{27}' $checkFile
 
 
 #Problem 3
