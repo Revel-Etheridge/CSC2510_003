@@ -33,7 +33,7 @@ grep -E -i -m10 '^.{10}$' $checkFile
 
 #Problem 5
 echo -e "${HI}5. Contains a sequence between 6 and 8 upper- or lower-case alphabetic characters. The sequence must be separated from the rest of the line by a space or tab on each side.$NORMAL"
-grep -E -i '^\s[a-zA-Z]{6,8}\s$' "$checkFile"
+grep -E -m10 '(^|\s)[A-Za-z]{6,8}(\s|$)' $checkFile
 
 
 #Problem 6
@@ -44,5 +44,6 @@ grep -E -m10 '^([0-9]{3}-[0-9]{4}|[^-][0-9]{3}-[0-9]{4})' $checkFile
 
 #Problem 7
 echo -e "${HI}7. Contains a valid URL on a line by itself.$NORMAL"
+grep -E  -i -m10 '^(http|HTTP)://[a-zA-Z]+\.[a-zA-Z]+\.(com|edu)$' $checkFile
 
 
