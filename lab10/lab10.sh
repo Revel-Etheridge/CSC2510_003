@@ -12,9 +12,8 @@ HI='\033[0;32m'
 NORMAL='\033[0m'
 
 #Problem 1
-echo -e "${HI}1. Starts or ends with Jose$NORMAL"
-
-
+echo -e "${HI}1. Starts or ends with Jose.$NORMAL"
+grep -E '^Jose|Jose$' $checkFile
 
 #Problem 2
 echo -e "${HI}2. Contain a sequence of at least 27 upper or lower-case alphabetic characters.$NORMAL"
@@ -42,6 +41,6 @@ echo -e "${HI}6. Contains a local phone number. For example: 123-4567.$NORMAL"
 
 
 #Problem 7
-echo -e "${HI}7. Contains a valid URL on a line by itself$NORMAL"
+echo -e "${HI}7. Contains a valid URL on a line by itself.$NORMAL"
 
 
